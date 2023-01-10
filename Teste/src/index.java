@@ -9,5 +9,5 @@
  */
 public class index {
     
-    int idade;
+    int numero;
 }
