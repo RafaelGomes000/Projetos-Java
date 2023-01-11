@@ -16,10 +16,36 @@ public class Lutador {
     private float altura;
     private float peso;
     private String categoria;
-    private double vitoria;
-    private double derrota;
-    private double empate;
-    //Métodos Públicos
+    private int vitoria, derrota, empate;
     
+    //Métodos Públicos
+    public void apresentar(){
+        
+    }
+    public void status(){
+        
+    }
+    public void ganharLuta(){
+        
+    }
+    public void perderLuta(){
+        
+    }
+    public void empatarLuta(){
+        
+    }
     //Métodos Especiais
+
+    public Lutador(String nome, String nacionalidade, int idade, float altura, float peso, String categoria, int vitoria, int derrota, int empate) {
+        this.nome = nome;
+        this.nacionalidade = nacionalidade;
+        this.idade = idade;
+        this.altura = altura;
+        this.peso = peso;
+        this.categoria = categoria;
+        this.vitoria = vitoria;
+        this.derrota = derrota;
+        this.empate = empate;
+    }
+    
 }
