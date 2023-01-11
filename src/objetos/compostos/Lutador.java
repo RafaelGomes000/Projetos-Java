@@ -22,7 +22,7 @@ public class Lutador {
     public void apresentar(){
         System.out.println("Apresentamos o lutador: " + this.getNome());
         System.out.println("Nacionalidade: " + this.getNacionalidade());
-        System.out.println("Idade: " + this.getNacionalidade());
+        System.out.println("Idade: " + this.getIdade());
         System.out.println("Altura: " + this.getAltura());
         System.out.println("Peso: " + this.getPeso());
         System.out.println("Vitória: " + this.getVitoria());
@@ -32,6 +32,7 @@ public class Lutador {
     public void status(){
         System.out.println("Nome: " + this.getNome());
         System.out.println("Peso: " + this.getPeso());
+        System.out.println("Categoria: " + this.getCategoria());
         System.out.println("Vitória: " + this.getVitoria());
         System.out.println("Derrota: " + this.getDerrota());
         System.out.println("Empate: " + this.getEmpate());
@@ -47,13 +48,12 @@ public class Lutador {
     }
     //Métodos Especiais
 
-    public Lutador(String nome, String nacionalidade, int idade, float altura, float peso, String categoria, int vitoria, int derrota, int empate) {
+    public Lutador(String nome, String nacionalidade, int idade, float altura, float peso, int vitoria, int derrota, int empate) {
         this.nome = nome;
         this.nacionalidade = nacionalidade;
         this.idade = idade;
         this.altura = altura;
-        this.peso = peso;
-        this.categoria = categoria;
+        this.setPeso(peso);
         this.vitoria = vitoria;
         this.derrota = derrota;
         this.empate = empate;
