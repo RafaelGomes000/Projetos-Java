@@ -38,13 +38,13 @@ public class Lutador {
         System.out.println("Empate: " + this.getEmpate());
     }
     public void ganharLuta(){
-        
+        this.setVitoria(getVitoria() + 1);
     }
     public void perderLuta(){
-        
+        this.setDerrota(getDerrota()+ 1);
     }
     public void empatarLuta(){
-        
+        this.setEmpate(getEmpate() + 1);
     }
     //Métodos Especiais
 
@@ -123,7 +123,7 @@ public class Lutador {
     }
 
     public void setVitoria(int vitoria) {
-        this.setVitoria(this.getVitoria() + 1);
+        this.vitoria = vitoria;
     }
 
     public int getDerrota() {
@@ -131,7 +131,7 @@ public class Lutador {
     }
 
     public void setDerrota(int derrota) {
-        this.setDerrota(this.getDerrota() + 1);
+        this.derrota = derrota;
     }
 
     public int getEmpate() {
@@ -139,7 +139,7 @@ public class Lutador {
     }
 
     public void setEmpate(int empate) {
-        this.setEmpate(this.getEmpate() + 1);
+        this.empate = empate;
     }
     
     
