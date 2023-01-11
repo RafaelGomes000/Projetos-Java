@@ -20,10 +20,21 @@ public class Lutador {
     
     //Métodos Públicos
     public void apresentar(){
-        
+        System.out.println("Apresentamos o lutador: " + this.getNome());
+        System.out.println("Nacionalidade: " + this.getNacionalidade());
+        System.out.println("Idade: " + this.getNacionalidade());
+        System.out.println("Altura: " + this.getAltura());
+        System.out.println("Peso: " + this.getPeso());
+        System.out.println("Vitória: " + this.getVitoria());
+        System.out.println("Derrota: " + this.getDerrota());
+        System.out.println("Empate: " + this.getEmpate());
     }
     public void status(){
-        
+        System.out.println("Nome: " + this.getNome());
+        System.out.println("Peso: " + this.getPeso());
+        System.out.println("Vitória: " + this.getVitoria());
+        System.out.println("Derrota: " + this.getDerrota());
+        System.out.println("Empate: " + this.getEmpate());
     }
     public void ganharLuta(){
         
@@ -47,5 +58,90 @@ public class Lutador {
         this.derrota = derrota;
         this.empate = empate;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNacionalidade() {
+        return nacionalidade;
+    }
+
+    public void setNacionalidade(String nacionalidade) {
+        this.nacionalidade = nacionalidade;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public float getAltura() {
+        return altura;
+    }
+
+    public void setAltura(float altura) {
+        this.altura = altura;
+    }
+
+    public float getPeso() {
+        return peso;
+    }
+
+    public void setPeso(float peso) {
+        this.peso = peso;
+        this.setCategoria();
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    private void setCategoria() {
+        if (this.peso < 52.2){
+            this.categoria = "Inválido";
+        }else if (this.peso <= 70.3){
+            this.categoria = "Leve";
+        }else if (this.peso <= 83.9){
+            this.categoria = "Médio";
+        }else if (this.peso <= 120.2){
+            this.categoria = "Pesado";
+        }else{
+            this.categoria = "Inválido";
+        }
+    }
+
+    public int getVitoria() {
+        return vitoria;
+    }
+
+    public void setVitoria(int vitoria) {
+        this.setVitoria(this.getVitoria() + 1);
+    }
+
+    public int getDerrota() {
+        return derrota;
+    }
+
+    public void setDerrota(int derrota) {
+        this.setDerrota(this.getDerrota() + 1);
+    }
+
+    public int getEmpate() {
+        return empate;
+    }
+
+    public void setEmpate(int empate) {
+        this.setEmpate(this.getEmpate() + 1);
+    }
+    
+    
     
 }
