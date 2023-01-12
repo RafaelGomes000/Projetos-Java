@@ -1,21 +1,21 @@
 package projetolivro;
 
-public class Livro {
+public class Livro implements Publicacao{
     
     private String titulo;
     private String autor;
     private int totalPaginas;
     private int paginaAtual;
     private boolean aberto;
-    private String leitor;
+    private Pessoa leitor;
 
-    public Livro(String titulo, String autor, int totalPaginas, int paginaAtual, boolean aberto, String leitor) {
+    public Livro(String titulo, String autor, int totalPaginas, int paginaAtual, boolean aberto, Pessoa leitor) {
         this.titulo = titulo;
         this.autor = autor;
         this.totalPaginas = totalPaginas;
-        this.paginaAtual = paginaAtual;
-        this.aberto = aberto;
         this.leitor = leitor;
+        this.aberto = false;
+        this.paginaAtual = 0;
     }
 
     public String getTitulo() {
@@ -58,22 +58,54 @@ public class Livro {
         this.aberto = aberto;
     }
 
-    public String getLeitor() {
+    public Pessoa getLeitor() {
         return leitor;
     }
 
-    public void setLeitor(String leitor) {
+    public void setLeitor(Pessoa leitor) {
         this.leitor = leitor;
     }
     
     //Métodos
-    public void detalhes(){
-        System.out.println("----Detalhes----");
-        System.out.println("Título: " + this.getTitulo());
-        System.out.println("Autor: " + this.getAutor());
-        System.out.println("Total de páginas: " + this.getTotalPaginas());
-        System.out.println("Página atual: " + this.getPaginaAtual());
-        System.out.println("Aberto: " + this.isAberto());
-        System.out.println("Leitor: " + this.getLeitor());
+    public String detalhes() {
+        return " Livro: " + "\n titulo= " + titulo 
+                + "\n autor= " + autor 
+                + "\n totalPaginas= " + totalPaginas 
+                + "\n paginaAtual= " + paginaAtual 
+                + "\n aberto= " + aberto 
+                + "\n leitor= " + leitor.getNome()
+                + "\n idade= " + leitor.getIdade()
+                + "\n sexo= " + leitor.getSexo();
     }
+
+    @Override
+    public void abrir() {
+        this.aberto = true;
+    }
+
+    @Override
+    public void fechar() {
+        this.aberto = false;
+    }
+
+    @Override
+    public void folhear(int p) {
+        if(p > this.totalPaginas){
+            this.paginaAtual = 0;
+        }else{
+            this.paginaAtual = p;
+        }
+    }
+
+    @Override
+    public void avancarPagina() {
+        this.paginaAtual++;
+    }
+
+    @Override
+    public void voltarPagina() {
+        this.paginaAtual--;
+    }
+    
+    
 }

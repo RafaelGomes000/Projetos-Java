@@ -38,6 +38,6 @@ public class Pessoa {
     
     //Métodos
     public void fazerAniversario(){
-        this.setIdade(this.getIdade() + 1);
+        this.idade = this.idade + 1;
     }
 }
