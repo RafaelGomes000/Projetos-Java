@@ -1,20 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package projetosobrecarga;
 
-/**
- *
- * @author Rafael Almeida
- */
 public class ProjetoSobrecarga {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Cachorro cachorro = new Cachorro();
+        
+        cachorro.reagir("Olá cachorro");
+        cachorro.reagir("Vai apanhar");
+        cachorro.reagir(11,45);
+        cachorro.reagir(21, 00);
+        cachorro.reagir(true);
+        cachorro.reagir(false);
+        cachorro.reagir(2, 12.5f);
+        cachorro.reagir(17, 4.5f);
     }
     
 }
