@@ -46,7 +46,8 @@ public class Video implements AcoesUsuario{
     }
 
     public void setAvaliacao(int avaliacao) {
-        this.avaliacao = avaliacao;
+        int nova;
+        nova = (int)((this.avaliacao + avaliacao)/ this.views);
     }
 
     public int getViews() {
@@ -75,11 +76,11 @@ public class Video implements AcoesUsuario{
 
     @Override
     public String toString() {
-        return "Video{" + "titulo=" + titulo 
-                + ", avaliacao=" + avaliacao 
-                + ", views=" + views 
-                + ", curtidas=" + curtidas 
-                + ", reproduzindo=" + reproduzindo + '}';
+        return "Video{" + "titulo= " + titulo 
+                + ", avaliacao= " + avaliacao 
+                + ", views= " + views 
+                + ", curtidas= " + curtidas 
+                + ", reproduzindo= " + reproduzindo + '}';
     }
     
     

@@ -28,7 +28,8 @@ public class Usuario extends Pessoa{
 
     @Override
     public String toString() {
-        return "Usuario{" + super.toString() + "login= " + login + ", totAssistindo= " + totAssistindo + '}';
+        return "Usuario{" + super.toString() + "login= " + login 
+                + ", totAssistindo= " + totAssistindo + '}';
     }
     
     
